@@ -1,0 +1,16 @@
+{
+	"Type": "2.1",
+	"Description": "Dependencies not hosted on PyPI",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "ERROR: Packages installed from PyPI cannot depend on packages which are not also hosted on PyPI.",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,205 @@
+{
+	"Type": "2.3.9",
+	"Description": "Syntax Error",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "SyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["3.8"]
+				}
+			]
+		},
+        {
+            "regex": "SyntaxError: unknown encoding: '?(.*)'?",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: default '(.*)' must be last",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: '(.*)' outside function",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: '(.*)' not properly in loop",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: from __future__ imports must occur at the beginning of the file",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: duplicate argument '(.*)' in function defination",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: '(.*)' not supported inside .* clause",
+            "apply": [
+                {
+                    "group": [".*"],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: .* with argument .* ?inside generator",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: EOF while scanning triple-quoted string literal",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: can't assign to literal",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: [(]unicode error[)] .* codec can't decode bytes in position [0-9]+-[0-9]+: truncated .*",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: non-default argument follows default argument",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: Non-ASCII character .* in file",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: encoding problem: .* with .*",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+        {
+            "regex": "SyntaxError: only named arguments may follow [*]expression",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxError: Missing parentheses in call to '(.+)'",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxError: leading zeros in decimal integer literals are not permitted",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxWarning: \"is\" with a literal",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxError: unexpected EOF while parsing",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxError: iterable unpacking cannot be used in comprehension",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        },
+				{
+            "regex": "SyntaxError: cannot assign to literal",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["3.8"]
+                }
+            ]
+        }
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"Type": "2.9",
+	"Description": "SSL certificate verify failed",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "error: <urlopen error \\[SSL: CERTIFICATE_VERIFY_FAILED\\] certificate verify failed: unable to get local issuer certificate \\((.+)\\)>",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		}
+	]
+}

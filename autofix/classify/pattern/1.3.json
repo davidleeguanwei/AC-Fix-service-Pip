@@ -1,0 +1,88 @@
+{
+	"Type": "1.3",
+	"Description": "Import Error",
+	"Strategy": "find_source_code",
+	"Pattern": [
+		{
+			"regex": "ImportError: No module named (.+)",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]"]
+				}
+			]
+		},
+        {
+            "regex": "File \"(.+)\", line (.+)\n\\s*(.+)\n\\s*ImportError: cannot import name '(.+)' from '(.+)'",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]", "[GROUP-3]", "[GROUP-5]", "[GROUP-4]"]
+                }
+            ]
+        },
+        {
+            "regex": "ImportError: .+ requires (.+) to be installed",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]"]
+                }
+            ]
+        },
+        {
+            "regex": "ImportError: .+ .+ \\((.+)\\) is not installed",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]"]
+                }
+            ]
+        },
+        {
+            "regex": "ImportError: The .+ module requires the (.+) module to be available",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]"]
+                }
+            ]
+        },
+        {
+            "regex": "ImportError: (.+) is required for building",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]"]
+                }
+            ]
+        },
+        {
+            "regex": "ImportError: either (.+) or (.+) required",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]","[GROUP-2]"]
+                }
+            ]
+        },
+		{
+            "regex": "File \"(.+)\", line (.+)\n\\s*(.+)\n\\s*ModuleNotFoundError: No module named '(.+)'",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]", "[GROUP-3]", "[GROUP-4]"]
+                }
+            ]
+        },
+        {
+            "regex": "Install (.+) with pip",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["[GROUP-1]"]
+                }
+            ]
+        }
+	]
+}

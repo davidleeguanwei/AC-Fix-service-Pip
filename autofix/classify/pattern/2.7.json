@@ -1,0 +1,16 @@
+{
+	"Type": "2.7",
+	"Description": "Invalid script entry point",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "ERROR: Invalid script entry point:",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.1",
+	"Description": "Syntax Error with class missing colon",
+	"Strategy": "add_colon_with_class",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*class [a-zA-Z]+([(]([a-z]+)[)])?\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.6",
+	"Description": "Syntax Error with comma in raise statement",
+	"Strategy": "replace_comma_with_brackets_in_raise",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*raise (.+), (.+)\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

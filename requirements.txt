@@ -1,0 +1,6 @@
+pandas
+psutil
+GitPython==3.0.6
+requests==2.18.4
+beautifulsoup4
+virtualenv

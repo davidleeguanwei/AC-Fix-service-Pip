@@ -1,0 +1,43 @@
+{
+	"Type": "2.5",
+	"Description": "Indentation Error",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "IndentationError: unindent does not match any outer indentation level",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		},
+        {
+            "regex": "IndentationError: unexpected indent",
+            "apply": [
+                {
+                    "group": [],
+                    "param": []
+                }
+            ]
+        },
+        {
+            "regex": "IndentationError: expected an indented block",
+            "apply": [
+                {
+                    "group": [],
+                    "param": []
+                }
+            ]
+        },
+				{
+            "regex": "TabError: inconsistent use of tabs and spaces in indentation",
+            "apply": [
+                {
+                    "group": [],
+                    "param": []
+                }
+            ]
+        }
+	]
+}

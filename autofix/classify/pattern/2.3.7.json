@@ -1,0 +1,34 @@
+{
+	"Type": "2.3.7",
+	"Description": "Syntax Error with missing parentheses",
+	"Strategy": "add_parentheses",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*print (.+)\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]","[GROUP-3]"]
+				}
+			]
+		},
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*print (.+)\n\\s*\\^\n\\s*SyntaxError: Missing parentheses in call to 'print'",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]","[GROUP-3]"]
+				}
+			]
+		},
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*exec (.+)\n\\s*\\^\nSyntaxError: Missing parentheses in call to 'exec'",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]","[GROUP-3]"]
+				}
+			]
+		}
+	]
+}

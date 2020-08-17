@@ -1,0 +1,169 @@
+{
+	"Type": "2.2",
+	"Description": "Not found file(s)",
+	"Strategy": "find_source_code",
+	"Pattern": [
+		{
+			"regex": "Error: .+ executable not found",
+			"apply": [
+				{
+					"group": [],
+					"param": ["project.name"]
+				}
+			]
+		},
+        {
+            "regex": "Package .+ was not found in the .+ search path",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": "Error: .+ not found in .+",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": "ERROR: .+ not found in .+",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+ not found, the .+ feature is not able to work",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+: no .+ not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": "configure: error: .+ development files not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": "EnvironmentError: .+ not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+: Command not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+: not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+PackageNotFoundError: .+ not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": "file .+ .* ?not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+ was not found, install .+ first through your package manager or using: pip install .+",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+        {
+            "regex": ".+ not found - compilation disabled",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+				{
+            "regex": "\\[Errno 2\\] No such file or directory: '.+'",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+				{
+            "regex": "no such file or directory",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+				{
+            "regex": "No such file or directory",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        },
+				{
+            "regex": "fatal error: '.+' file not found",
+            "apply": [
+                {
+                    "group": [],
+                    "param": ["project.name"]
+                }
+            ]
+        }
+	]
+}

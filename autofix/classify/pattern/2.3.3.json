@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.3",
+	"Description": "Syntax Error with except using comma",
+	"Strategy": "replace_comma_with_as_in_except",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*except (.+), (.+):\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

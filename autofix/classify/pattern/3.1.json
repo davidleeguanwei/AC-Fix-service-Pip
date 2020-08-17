@@ -1,0 +1,16 @@
+{
+	"Type": "3.1",
+	"Description": "Has sudo command",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "has sudo command",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		}
+	]
+}

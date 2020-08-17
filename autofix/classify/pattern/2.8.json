@@ -1,0 +1,16 @@
+{
+	"Type": "2.8",
+	"Description": "Function has been deprecated",
+	"Strategy": "switch_python_version",
+	"Pattern": [
+		{
+			"regex": "is deprecated",
+			"apply": [
+				{
+					"group": [],
+					"param": ["2.7"]
+				}
+			]
+		}
+	]
+}

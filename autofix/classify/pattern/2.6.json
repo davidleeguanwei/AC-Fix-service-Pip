@@ -1,0 +1,16 @@
+{
+	"Type": "2.6",
+	"Description": "Installation exceeds time limit",
+	"Strategy": "",
+	"Pattern": [
+		{
+			"regex": "exceed time limit",
+			"apply": [
+				{
+					"group": [],
+					"param": []
+				}
+			]
+		}
+	]
+}

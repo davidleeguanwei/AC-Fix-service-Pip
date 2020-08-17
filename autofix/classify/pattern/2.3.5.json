@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.5",
+	"Description": "Syntax Error with leading zeros",
+	"Strategy": "replace_0_with_0o",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*(.+)0(.+)\n\\s*\\^\nSyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

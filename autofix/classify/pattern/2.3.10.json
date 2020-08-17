@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.10",
+	"Description": "Syntax Error with from __future__ import not at the beginning",
+	"Strategy": "put_from_future_at_first_line",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*(.+)\n\\s*\\^\nSyntaxError: from __future__ imports must occur at the beginning of the file",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]", "[GROUP-3]"]
+				}
+			]
+		}
+	]
+}

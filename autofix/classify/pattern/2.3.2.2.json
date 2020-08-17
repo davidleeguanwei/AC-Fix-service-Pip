@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.2.2",
+	"Description": "Syntax Error with async reserved keyword",
+	"Strategy": "replace_async_with_getattr",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*(.+) = asyncio\\.async\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

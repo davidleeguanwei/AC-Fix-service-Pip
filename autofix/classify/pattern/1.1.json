@@ -1,0 +1,43 @@
+{
+	"Type": "1.1",
+	"Description": "Require lower python version",
+	"Strategy": "switch_python_version",
+	"Pattern": [
+		{
+			"regex": "Package .+ requires a different Python: (\\d+\\.\\d+) not in .+",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]"]
+				}
+			]
+		},
+		{
+			"regex": "(.+) is not supported on Python 3",
+			"apply": [
+				{
+					"group": [],
+					"param": ["2.7"]
+				}
+			]
+		},
+		{
+			"regex": ".+ requires Python (.+)\\(.+ detected\\)",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]"]
+				}
+			]
+		},
+		{
+			"regex": "\\s*Exception: Requires Python-(.+) or (.+)",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

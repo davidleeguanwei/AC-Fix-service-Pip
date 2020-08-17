@@ -1,0 +1,25 @@
+{
+	"Type": "2.3.4",
+	"Description": "Syntax Error with ur in regex",
+	"Strategy": "replace_ur_with_r_in_regex",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*(re.compile\\()?ur'''\\^((.+)\n)+\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		},
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*(re.compile\\()?ur'\\^((.+)\n)+\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}

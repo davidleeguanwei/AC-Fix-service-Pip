@@ -1,0 +1,16 @@
+{
+	"Type": "2.3.8",
+	"Description": "Syntax Error with L keyword in integer",
+	"Strategy": "remove_L_in_int",
+	"Pattern": [
+		{
+			"regex": "File \"(.+)\", line (.+)\n\\s*([-.\\w]+)\\s*=?\\s*(.*)-?([-.\\d]+)L(.*)\n\\s*\\^\nSyntaxError: invalid syntax",
+			"apply": [
+				{
+					"group": [],
+					"param": ["[GROUP-1]","[GROUP-2]"]
+				}
+			]
+		}
+	]
+}
